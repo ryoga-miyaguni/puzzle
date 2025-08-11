@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <script src="program.js"></script>
+  </head>
+  <body onload="initializeSetting()" onkeydown="moveBlock(event)">
+    <div id="contents">
+      <div
+        id="title"
+        style="position: relative; width: auto; height: 60px; margin: 5px"
+      >
+        <span
+          style="
+            position: absolute;
+            font-weight: 600;
+            font-size: 30;
+            line-height: 50px;
+            left: 0px;
+            margin: 5px;
+            box-sizing: content-box;
+          "
+          >PUZZLE
+        </span>
+        <img
+          src="logo.png "
+          alt=""
+          style="
+            position: absolute;
+            scale: 60%;
+            top: -20px;
+            left: 300px;
+          "
+        />
+      </div>
+      <div id="game-area" style="position: relative; margin: 5px">
+        <div
+          id="main-area"
+          style="position: absolute; width: 240px; height: 440px; margin: 5px"
+        >
+          <canvas
+            id="background-area"
+            width="240"
+            height="440"
+            style="position: absolute; background-color: #2e4679"
+          ></canvas>
+          <canvas
+            id="main-game-area"
+            width="240"
+            height="440"
+            style="
+              position: absolute;
+              background-color: transparent;
+              z-index: 5;
+            "
+          ></canvas>
+        </div>
+        <div
+          id="sub-area"
+          style="
+            position: relative;
+            left: 280px;
+            height: 440px;
+            width: 120px;
+            margin: 5px;
+          "
+        >
+          <span style="position: absolute; left: 16px; top: 5px; font-size: 20">
+            【Next】
+          </span>
+          <canvas
+            id="next-block-area"
+            width="120"
+            height="260"
+            style="
+              position: absolute;
+              background-color: #2e4679;
+              left: 0px;
+              top: 36px;
+              border-radius: 10px;
+            "
+          ></canvas>
+          <div
+            style="
+              position: absolute;
+              left: 10px;
+              top: 310px;
+              font-size: 20;
+              text-align: right;
+            "
+          >
+            【Score】<br />
+            <span id="score" style="position: absolute; right:10px;">0</span>
+          </div>
+          <button
+            id="start-bottun"
+            style="
+              position: absolute;
+              left: 0px;
+              top: 390px;
+              width: 120px;
+              height: 50px;
+              cursor: pointer;
+              background-color: salmon;
+              border-radius: 10px;
+              z-index: 100;
+            "
+            onclick="startGame()"
+          >
+            New Game
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
